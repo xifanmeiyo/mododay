@@ -3,7 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<div>{{ Auth::user()->id }}</div> -->
+  @foreach($data as $values)
+            <tr>
+           <!--   <th scope="row">{{$values->id}}</th>-->
+       <th scope="row">{{$values->xinxi}}</th>
+             
+            </tr>
+            @endforeach
 
+            
         <title>Laravel</title>
 
         <!-- Fonts -->

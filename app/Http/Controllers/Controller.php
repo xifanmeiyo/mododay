@@ -10,5 +10,10 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-  
+   public function show()
+    {
+         $data=\DB::table('info')->get();
+    return view('welcome')->with("data",$data);
+    }
+     
 }

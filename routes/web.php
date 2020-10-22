@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +23,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/foo', function () {
     return 'Hello, Welcome to LaravelAcademy.org';
 })->middleware('auth');
+Route::get('user/{id}', [Controller::class, 'show']);
+ 
