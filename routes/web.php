@@ -22,4 +22,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 Route::get('/foo', function () {
     return 'Hello, Welcome to LaravelAcademy.org';
-});
+})->middleware('auth');
