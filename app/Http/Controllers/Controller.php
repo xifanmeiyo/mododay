@@ -15,5 +15,5 @@ class Controller extends BaseController
          $data=\DB::table('info')->get();
     return view('welcome')->with("data",$data);
     }
-     
+   
 }
